@@ -60,7 +60,7 @@ public:
          * To the window add a label and a slider widget.
          */
 
-        Screen app{{650, 600}, "Newton's circle", false};
+        Screen app{{650, 600}, "Newton's circle"};
 
         Window *window = new Window(&app, "Light sources");
         window->setPosition(Vector2i(0, 0));
