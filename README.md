@@ -16,7 +16,7 @@ This projekt is based on
 Build on Linux:
 ```
 git clone --recursive https://github.com/xchuki00/FyoProject.git
-cd 
+cd FyoProject
 mkdir build
 cd build
 cmake ../
