@@ -22,7 +22,7 @@
 #include <nanogui/colorwheel.h>
 #include <nanogui/glcanvas.h>
 #include <nanogui/graph.h>
-#include <math.h>
+#include <cmath>
 #include <string>
 
 
@@ -125,7 +125,7 @@ public:
         mShader.setUniform("diameter", diameter * pow(10, 6));
         double alfa = 2 * asin(diameter / (2 * radius));
         double thick = radius * (1 - cos(alfa / 2));
-        float piDivAlfa = M_PI / alfa;
+        float piDivAlfa = 3.141592653589793   / alfa;
         mShader.setUniform("thick", thick * pow(10, 6));
         mShader.setUniform("piDivAlfa", piDivAlfa);
 
@@ -279,7 +279,7 @@ public:
             this->diameter = stof(value);
             double alfa = 2 * asin(diameter / (2 * radius));
             double thick = radius * (1 - cos(alfa / 2));
-            float piDivAlfa = M_PI / alfa;
+            float piDivAlfa = 3.141592653589793 / alfa;
             mShader.bind();
 
             mShader.setUniform("diameter", diameter * pow(10, 6));
@@ -302,7 +302,7 @@ public:
             this->diameter = value*100;
             double alfa = 2 * asin(diameter / (2 * radius));
             double thick = radius * (1 - cos(alfa / 2));
-            float piDivAlfa = M_PI / alfa;
+            float piDivAlfa = 3.141592653589793 / alfa;
             mShader.bind();
 
             mShader.setUniform("diameter", diameter * pow(10, 6));
@@ -335,7 +335,7 @@ public:
             this->radius = stof(value);
             double alfa = 2 * asin(diameter / (2 * radius));
             double thick = radius * (1 - cos(alfa / 2));
-            float piDivAlfa = M_PI / alfa;
+            float piDivAlfa = 3.141592653589793 / alfa;
             mShader.bind();
 
             mShader.setUniform("radius", radius * pow(10, 6));
@@ -357,7 +357,7 @@ public:
             this->radius = value;
             double alfa = 2 * asin(diameter / (2 * radius));
             double thick = radius * (1 - cos(alfa / 2));
-            float piDivAlfa = M_PI / alfa;
+            float piDivAlfa = 3.141592653589793 / alfa;
             mShader.bind();
 
             mShader.setUniform("radius", radius * pow(10, 6));
