@@ -28,3 +28,5 @@ if cmake return error about missing resource/library/.... try
 git submodule update --init --recursive
 ```
 
+For windows I add already compilede binaries, so you can simple download as zip and in directory win you finde exe file
+
