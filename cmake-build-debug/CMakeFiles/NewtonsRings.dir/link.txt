@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++14 -g   CMakeFiles/NewtonsRings.dir/NewtonsRings.cpp.o  -o NewtonsRings -Wl,-rpath,/home/patrik/fyo/cmake-build-debug/lib/nanogui lib/nanogui/libnanogui.so -lGL -lXxf86vm -lXrandr -lXinerama -lXcursor -lXi -lX11 -lpthread -lrt -ldl 

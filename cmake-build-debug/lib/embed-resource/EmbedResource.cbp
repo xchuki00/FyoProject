@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="EmbedResource"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\lib\;CMake Files\lib\embed-resource\;CMake Files\lib\nanogui\;CMake Files\lib\nanogui\ext\;CMake Files\lib\nanogui\ext\glfw\;CMake Files\lib\nanogui\ext\glfw\CMake\;CMake Files\lib\nanogui\ext\glfw\CMake\modules\;CMake Files\lib\nanogui\ext\glfw\src\;CMake Files\lib\nanogui\ext\pybind11\;CMake Files\lib\nanogui\ext\pybind11\tools\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/patrik/fyo/cmake-build-debug/lib/embed-resource"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/patrik/fyo/cmake-build-debug/lib/embed-resource/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/patrik/fyo/cmake-build-debug/lib/embed-resource/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/patrik/fyo/cmake-build-debug/lib/embed-resource/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/patrik/fyo/cmake-build-debug/lib/embed-resource/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="embed-resource">
+				<Option output="/home/patrik/fyo/cmake-build-debug/lib/embed-resource/embed-resource" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/patrik/fyo/cmake-build-debug/lib/embed-resource"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DNANOGUI_PYTHON"/>
+					<Add option="-DNANOGUI_SHARED"/>
+					<Add option="-DNVG_SHARED"/>
+					<Add option="-DGLAD_GLAPI_EXPORT"/>
+					<Add directory="/home/patrik/fyo/lib/nanogui/include"/>
+					<Add directory="/home/patrik/fyo/lib/nanogui/ext/glfw/include"/>
+					<Add directory="/home/patrik/fyo/lib/nanogui/ext/nanovg/src"/>
+					<Add directory="/home/patrik/fyo/lib/nanogui/ext/eigen"/>
+					<Add directory="/home/patrik/fyo/lib/embed-resource"/>
+					<Add directory="/usr/lib/gcc/x86_64-w64-mingw32/7.3-win32/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-w64-mingw32/7.3-win32/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="/usr/lib/gcc/x86_64-w64-mingw32/7.3-win32/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-w64-mingw32/7.3-win32/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-w64-mingw32/7.3-win32/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-w64-mingw32/7.3-win32/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/patrik/fyo/cmake-build-debug/lib/embed-resource/Makefile&quot;  VERBOSE=1 embed-resource"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/patrik/fyo/cmake-build-debug/lib/embed-resource/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/patrik/fyo/cmake-build-debug/lib/embed-resource/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/patrik/fyo/cmake-build-debug/lib/embed-resource/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="embed-resource/fast">
+				<Option output="/home/patrik/fyo/cmake-build-debug/lib/embed-resource/embed-resource" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/patrik/fyo/cmake-build-debug/lib/embed-resource"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DNANOGUI_PYTHON"/>
+					<Add option="-DNANOGUI_SHARED"/>
+					<Add option="-DNVG_SHARED"/>
+					<Add option="-DGLAD_GLAPI_EXPORT"/>
+					<Add directory="/home/patrik/fyo/lib/nanogui/include"/>
+					<Add directory="/home/patrik/fyo/lib/nanogui/ext/glfw/include"/>
+					<Add directory="/home/patrik/fyo/lib/nanogui/ext/nanovg/src"/>
+					<Add directory="/home/patrik/fyo/lib/nanogui/ext/eigen"/>
+					<Add directory="/home/patrik/fyo/lib/embed-resource"/>
+					<Add directory="/usr/lib/gcc/x86_64-w64-mingw32/7.3-win32/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-w64-mingw32/7.3-win32/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="/usr/lib/gcc/x86_64-w64-mingw32/7.3-win32/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-w64-mingw32/7.3-win32/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-w64-mingw32/7.3-win32/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-w64-mingw32/7.3-win32/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/patrik/fyo/cmake-build-debug/lib/embed-resource/Makefile&quot;  VERBOSE=1 embed-resource/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/patrik/fyo/cmake-build-debug/lib/embed-resource/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/patrik/fyo/cmake-build-debug/lib/embed-resource/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/patrik/fyo/cmake-build-debug/lib/embed-resource/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/patrik/fyo/lib/embed-resource/embedresource.cpp">
+			<Option target="embed-resource"/>
+		</Unit>
+		<Unit filename="/home/patrik/fyo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/patrik/fyo/lib/embed-resource/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\embed-resource\"/>
+		</Unit>
+		<Unit filename="/home/patrik/fyo/lib/nanogui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\nanogui\"/>
+		</Unit>
+		<Unit filename="/home/patrik/fyo/lib/nanogui/ext/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\nanogui\ext\glfw\"/>
+		</Unit>
+		<Unit filename="/home/patrik/fyo/lib/nanogui/ext/glfw/CMake/modules/FindVulkan.cmake">
+			<Option virtualFolder="CMake Files\lib\nanogui\ext\glfw\CMake\modules\"/>
+		</Unit>
+		<Unit filename="/home/patrik/fyo/lib/nanogui/ext/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/patrik/fyo/lib/nanogui/ext/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\lib\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/patrik/fyo/lib/nanogui/ext/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\lib\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/patrik/fyo/lib/nanogui/ext/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\lib\nanogui\ext\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/patrik/fyo/lib/nanogui/ext/pybind11/tools/FindPythonLibsNew.cmake">
+			<Option virtualFolder="CMake Files\lib\nanogui\ext\pybind11\tools\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

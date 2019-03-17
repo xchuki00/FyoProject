@@ -29,6 +29,8 @@ void main(void) {
     float gama = atan(s*diameter,(radius-thick));
     float at = 1 - cos(gama * piDivAlfa);
     at *= thick;
+//    float gamma = 2 * asin(s*diameter / (2 * radius));
+//    float at = radius * (1-cos(gamma));
     vec3 colorVec = vec3(0,0,0);
     float color =fract((2*at)/(lambdas0/2));
     color -= 0.5f;
@@ -46,6 +48,7 @@ void main(void) {
     colorVec += abs(color) * LS2;
 
 
+//        fragColor = vec4(gamma*1000,0,0,1);
 
     fragColor = vec4(colorVec,1);
 

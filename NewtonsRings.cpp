@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <sstream>
 #include <cstdio>
 #include <nanogui/screen.h>
 #include <nanogui/window.h>
@@ -21,13 +23,15 @@
 #include <nanogui/glcanvas.h>
 #include <nanogui/graph.h>
 #include <math.h>
+#include <string>
+
 
 #if defined(_WIN32)
 #include <windows.h>
 #endif
 
 #include <nanogui/glutil.h>
-#include "Resource.h"
+
 
 
 using namespace std;
@@ -87,13 +91,8 @@ public:
          * Load GLSL shader code from embedded resources
          * See: https://github.com/cyrilcode/embed-resource
          */
+        mShader.initFromFiles("raymarching_shader","../shader/vert.glsl","../shader/frag.glsl");
 
-        Resource vertShader = LOAD_RESOURCE(vert_glsl);
-        Resource fragShader = LOAD_RESOURCE(frag_glsl);
-        mShader.init("raymarching_shader",
-                     string(vertShader.data(), vertShader.size()),
-                     string(fragShader.data(), fragShader.size())
-        );
 
         /**
          * Fill the screen with a rectangle (2 triangles)
@@ -237,6 +236,8 @@ public:
         sliders[index]->setFixedWidth(160);
 
         sliders[index]->setCallback([this,index](float value) {
+            if (this->enable[index] == 0)
+                return false;
             ostringstream ostr;
             int tens = 100;
             value = round((value*600+300)*tens)/tens;
@@ -365,10 +366,9 @@ public:
         });
     }
 
-
     Vector3f waveToColor(float wave) {
         float R, G, B;
-        if (wave >= 380 && wave < 440) {
+        if (wave >= 300 && wave < 440) {
             R = -(wave - 440.) / (440. - 350.);
             G = 0.0;
             B = 1.0;
@@ -389,7 +389,7 @@ public:
             R = 1.0;
             G = -(wave - 645.) / (645. - 580.);
             B = 0.0;
-        } else if (wave >= 645 && wave <= 780) {
+        } else if (wave >= 645 && wave <= 800) {
             R = 1.0;
             G = 0.0;
             B = 0.0;
@@ -399,17 +399,24 @@ public:
             B = 0.0;
         }
         float SSS;
-        if (wave >= 380 && wave < 420) {
+        if (wave >= 300 && wave < 420) {
             SSS = 0.3 + 0.7 * (wave - 350) / (420 - 350);
         } else if (wave >= 420 && wave <= 700) {
             SSS = 1.0;
-        } else if (wave > 700 && wave <= 780) {
+        } else if (wave > 700 && wave <= 800) {
             SSS = 0.3 + 0.7 * (780 - wave) / (780 - 700);
         } else {
             SSS = 0.0;
             SSS *= 255;
         }
         return Vector3f((SSS * R), (SSS * G), (SSS * B));
+    }
+
+    string loadShader(string path){
+        std::ifstream ifs(path);
+        std::string content( (std::istreambuf_iterator<char>(ifs) ),
+                             (std::istreambuf_iterator<char>()    ) );
+        return content;
     }
 };
 
